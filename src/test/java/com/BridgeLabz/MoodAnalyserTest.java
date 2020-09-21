@@ -31,15 +31,10 @@ public class MoodAnalyserTest {
         String mood = moodAnalyser.analyseMood();
         Assert.assertEquals("HAPPY", mood);
     }
-
     @Test
-    public void givenNullMessageWillReturnException() {
-        try {
-            MoodAnalyser moodAnalyser = new MoodAnalyser(null);
-            String mood = moodAnalyser.analyseMood();
-            Assert.assertEquals("HAPPY" ,mood);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void givenNullWillReturnHappy() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        String mood = moodAnalyser.analyseMood();
+        Assert.assertEquals("HAPPY", mood);
     }
 }
